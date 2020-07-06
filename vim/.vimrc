@@ -1,3 +1,4 @@
+syntax on
 packloadall
 set tabstop=4
 set shiftwidth=4
@@ -23,6 +24,11 @@ function! ToggleNetrw()
         silent Lexplore
     endif
 endfunction
-nnoremap <silent> \\ :call ToggleNetrw()<CR>
+"   nnoremap <silent> \\ :call ToggleNetrw()<CR>
 let g:NetrwIsOpen=0
 
+" FIX: wsl starting with REPLACE mode
+" https://stackoverflow.com/a/11940894
+if $TERM =~ 'xterm-256color'
+  set noek
+endif
