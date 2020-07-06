@@ -1,1 +1,1 @@
-find . -name "*.sh" | grep -v "installAllDotfiles.sh" | xargs bash
+find . -name "install.sh" | xargs bash
