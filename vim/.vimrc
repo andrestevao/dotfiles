@@ -24,7 +24,7 @@ function! ToggleNetrw()
         silent Lexplore
     endif
 endfunction
-"   nnoremap <silent> \\ :call ToggleNetrw()<CR>
+nnoremap <silent> \\ :call ToggleNetrw()<CR>
 let g:NetrwIsOpen=0
 
 " FIX: wsl starting with REPLACE mode
