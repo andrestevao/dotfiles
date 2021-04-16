@@ -5,20 +5,14 @@
 call plug#begin('~/.vim/plugged')
 
 	Plug 'junegunn/fzf'
-
 	Plug 'Raimondi/delimitMate'
-
 	Plug 'sheerun/vim-polyglot'
-
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 	Plug 'vim-airline/vim-airline'
-
 	Plug 'vim-airline/vim-airline-themes'
-
 	Plug 'gcmt/taboo.vim'
-
 	Plug 'nathanaelkane/vim-indent-guides'
+	Plug 'ghifarit53/tokyonight-vim'
 
 call plug#end()
 
@@ -47,7 +41,8 @@ set shiftwidth=2
 
 "plugin related config
 
-let g:airline_theme='simple'
+let g:airline_theme={'colorscheme':'tokyonight'}
+let g:airline_theme='tokyonight'
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 "basic keybindings
@@ -63,3 +58,14 @@ nnoremap <C-p> :FZF<CR>
 
 "taboo rename tab
 nnoremap ,r :TabooRename 
+
+set termguicolors
+
+let g:tokyonight_style = 'night'
+let g:tokyonight_enable_italic = 1
+
+colorscheme tokyonight
+
+set guifont=Iosevka:h20
+
+let g:neovide_fullscreen=v:true
