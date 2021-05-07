@@ -1,0 +1,9 @@
+alias inbox='task add +inbox'
+
+tickle () {
+  deadline=$1
+  shift
+  inbox +tickle wait:$deadline $@
+}
+
+alias tick=tickle
